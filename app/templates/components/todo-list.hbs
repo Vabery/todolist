@@ -1,0 +1,29 @@
+<section class="main">
+    {{yield}}
+<h4>Завершити/Поновити (ВСІ)</h4>
+    {{input type="checkbox" id="toggle-all" checked=allAreDone}}
+
+</section>
+
+<footer class="footer">
+    <span id="todo-count">
+    <strong>{{remaining}}</strong> {{inflection}}
+</span>
+    <ul class="filters">
+        <li>
+            {{#link-to "todos.index" activeClass="selected"}}Всі{{/link-to}}
+        </li>
+        <li>
+            {{#link-to "todos.incomplete" activeClass="selected"}}Aктивні{{/link-to}}
+        </li>
+        <li>
+            {{#link-to "todos.complete" activeClass="selected"}}Завершені{{/link-to}}
+        </li>
+    </ul>
+
+    {{#if hasCompleted}}
+    <button class="clear-completed" {{action "clearCompleted"}}>
+        Видалити завершені ({{completed}})
+    </button>
+{{/if}}
+</footer>

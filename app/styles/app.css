@@ -1,0 +1,55 @@
+body {
+    margin: auto;
+    padding: 0;
+}
+body li{
+    list-style: none;
+}
+header {
+    font-size: 20px;
+}
+#todoapp{
+    text-align: center;
+}
+.new-todo {
+    width: 300px;
+    font-style: italic;
+    color: red;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.todo-list{
+    padding: 10px;
+
+}
+
+.todo-list li {
+    padding: 10px;
+    border: 1px solid  black;
+
+}
+.destroy {
+    margin: 0 10px;
+}
+.footer ul {
+    padding: 0;
+}
+.footer ul li {
+    display: inline;
+    margin: 10px;
+}
+
+
+.todo-list li .toggle:checked:after {
+	color: #85ada7;
+	text-shadow: 0 1px 0 #669991;
+	bottom: 1px;
+	position: relative;
+}
+
+
+.todo-list li label.completed {
+	color: #a9a9a9;
+	text-decoration: line-through;
+}
